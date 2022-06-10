@@ -1,12 +1,12 @@
-let Email = require('./email.js');
-let Bot = require('./bot.js');
+const Email = require('./email.js');
+const Bot = require('./bot.js');
 
-let config = require('./config.json');
+const config = require('./config.json');
 
-disc = Bot.init(config.discord);
-email = Email.init(config.email);
+let disc = Bot.init(config.discord); //The discord bot client is saved to a variable for posterity. Not actually used anywhere, but maybe sometime!
+let email = Email.init(config.email);
 
-email.on('message',(data)=>{
+email.on('message',(data)=>{ //See email.js
     let {from,to,subject,date,inboxLength} = data;
-    Bot.sendDiscordEmbed((new Bot.EmailMessageEmbed(from[0],to[0],subject[0],date[0],inboxLength)).toEmbed());
+    Bot.sendDiscordEmbed((new Bot.EmailMessageEmbed(from[0],to[0],subject[0],date[0],inboxLength)).toEmbed()); //See bot.js
 });
