@@ -1,0 +1,17 @@
+{
+    "discord": {
+        "token": "BOT TOKEN",
+        "channel": "CHANNEL ID",
+        "userToPing": "USER ID",
+        "censorSenderEmails": false,
+        "censorYourEmail": true
+    },
+    "email": {
+        "user": "EMAIL",
+        "password": "EMAIL PASSWORD / APP PASSWORD FOR GMAIL",
+        "__information__": "Just a heads-up! The only email service this currently works with is Gmail, because of how the bot tracks what it's already seen. TODO: Fix that.",
+        "host": "imap.gmail.com",
+        "port": 993,
+        "tls": "true"
+    }
+}
